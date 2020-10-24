@@ -52,6 +52,8 @@ jobs:
               chmod +x hehehe.sh
               ./hehehe.sh
        - name: build the recovery
+         env:
+               TOKEN: ${{ secrets.TOKEN }}
          run: |
               chmod +x lololol.sh
               ./lololol.sh
