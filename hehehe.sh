@@ -2,7 +2,7 @@
 export TELEGRAM_DISABLE_WEB_PAGE_PREVIEW=true
 export DISABLE_WEB_PAGE_PREVIEW=true
 
-telegram -M "starting process! lineage os recoveryf or the galaxy A30 ♻️"
+telegram -M "starting process! lineage os recovery for the galaxy A30 ♻️"
 SYNC_START=$(date +"%s")
 
 mkdir lineage && cd lineage
