@@ -12,10 +12,11 @@ on:
 #    - cron: 0 8 * * 5
   watch:
     types: [started]
-
+# supported recoverys are TWRP and Lineage OS will add more soon.
 env:
   TYPE: build
   TZ: America/Recife
+  RECOVERY: TWRP
 
 jobs:
   build:
@@ -50,12 +51,12 @@ jobs:
          env:
               TOKEN: ${{ secrets.TOKEN }}
          run: | 
-              chmod +x hehehe.sh
-              ./hehehe.sh
+              chmod +x $RECOVERY/hehehe.sh
+              ./$RECOVERY/hehehe.sh
        - name: build the recovery
          env:
               TOKEN: ${{ secrets.TOKEN }}
          run: |
-              chmod +x lololol.sh
-              ./lololol.sh
+              chmod +x $RECOVERY/lololol.sh
+              ./$RECOVERY/lololol.sh
     
