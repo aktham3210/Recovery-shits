@@ -43,18 +43,17 @@ jobs:
             sudo rm -rf /usr/share/dotnet; sudo mkdir -p /extended_data; sudo chown -R runner:docker /extended_data; sudo ln -s /extended_data /mnt/secondary_disk; sudo ln -s /mnt/secondary_disk $GITHUB_WORKSPACE; sudo swapoff -av; sudo rm -f /swapfile
        - name: install telegram
          run: |
-             sudo -E apt-get -qq update
-             sudo -E apt-get -qq install git openjdk-8-jdk wget expect yarn
-             pip install pyrogram tgcrypto
+              chmod +x xd.sh
+              ./xd.sh
        - name: clone the sources
          env:
-               TOKEN: ${{ secrets.TOKEN }}
+              TOKEN: ${{ secrets.TOKEN }}
          run: | 
               chmod +x hehehe.sh
               ./hehehe.sh
        - name: build the recovery
          env:
-               TOKEN: ${{ secrets.TOKEN }}
+              TOKEN: ${{ secrets.TOKEN }}
          run: |
               chmod +x lololol.sh
               ./lololol.sh
