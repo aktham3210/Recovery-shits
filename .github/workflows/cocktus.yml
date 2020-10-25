@@ -16,7 +16,7 @@ on:
 env:
   TYPE: build
   TZ: America/Recife
-  RECOVERY: TWRP
+  RECOVERY: lineage
 
 jobs:
   build:
@@ -25,7 +25,6 @@ jobs:
     steps:
        - name: Checkouts
          uses: actions/checkout@master
-       - run: Get-PSDrive
 
        - name: configure python
          uses: actions/setup-python@v2
