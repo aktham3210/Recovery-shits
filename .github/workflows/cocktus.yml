@@ -40,6 +40,7 @@ jobs:
             sudo chmod a+rx /usr/local/bin/repo
             git config --global user.name "aktham3210"
             git config --global user.email "secrets.EMAILGIT"
+            sudo rm -rf /usr/share/dotnet; sudo mkdir -p /extended_data; sudo chown -R runner:docker /extended_data; sudo ln -s /extended_data /mnt/secondary_disk; sudo ln -s /mnt/secondary_disk $GITHUB_WORKSPACE; sudo swapoff -av; sudo rm -f /swapfile
        - name: install telegram
          run: |
              sudo -E apt-get -qq update
