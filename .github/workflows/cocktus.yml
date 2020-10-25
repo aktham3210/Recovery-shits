@@ -16,7 +16,7 @@ on:
 env:
   TYPE: build
   TZ: America/Recife
-  RECOVERY: TWRP
+  RECOVERY: lineage
 
 jobs:
   build:
