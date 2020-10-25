@@ -43,6 +43,7 @@ jobs:
             sudo rm -rf /usr/share/dotnet; sudo mkdir -p /extended_data; sudo chown -R runner:docker /extended_data; sudo ln -s /extended_data /mnt/secondary_disk; sudo ln -s /mnt/secondary_disk $GITHUB_WORKSPACE; sudo swapoff -av; sudo rm -f /swapfile
        - name: install telegram
          run: |
+              sudo install telegram /usr/bin
               chmod +x xd.sh
               ./xd.sh
        - name: clone the sources
