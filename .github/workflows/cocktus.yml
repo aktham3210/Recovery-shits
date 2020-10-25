@@ -21,12 +21,11 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-       - run: Get-PSDrive
 
     steps:
        - name: Checkouts
          uses: actions/checkout@master
+       - run: Get-PSDrive
 
        - name: configure python
          uses: actions/setup-python@v2
