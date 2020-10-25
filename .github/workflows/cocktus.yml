@@ -21,6 +21,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
+       - run: Get-PSDrive
 
     steps:
        - name: Checkouts
