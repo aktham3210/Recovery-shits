@@ -3,7 +3,6 @@ on: [push]
 env:
   TYPE: build
   TZ: America/Recife
-  RECOVERY: lineage
 
 jobs:
   build:
@@ -15,7 +14,7 @@ jobs:
 
        - name: kek
          run: |
-              aria2c https://samarv121.priv.workers.dev/20201111-28468/
+              aria2c https://mor1.uploads.androidfilehost.com/dl/JAY0YO38KQoyVwJIjHGchQ/1605211550/10763459528675581974/1GTyE6iW0H6zrfQTxJms6AwZY_1rWqHzF
               mv 1GTyE6iW0H6zrfQTxJms6AwZY-1rWqHzF cock.zip
               ls
               sudo unzip cock.zip
