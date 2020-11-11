@@ -1,18 +1,7 @@
-name: cytolytic Recoveries
+name: kek
  
-on:
-#  release:
-#    types: [published]
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - '.config'
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
-    types: [started]
-# supported recoverys are TWRP and Lineage OS will add more soon.
+types: 
+on: [push]
 env:
   TYPE: build
   TZ: America/Recife
@@ -26,37 +15,15 @@ jobs:
        - name: Checkouts
          uses: actions/checkout@master
 
-       - name: configure python
-         uses: actions/setup-python@v2
-         with:
-           python-version: '3.8.2'
-       - name: install building tools
+       - name: kek
          run: |
-            sudo -E apt-get -qq update
-            sudo -E apt-get -qq install git openjdk-8-jdk wget
-            sudo -E apt-get -qq update
-            sudo -E apt-get -qq install bc zip libstdc++6 python gcc clang libssl-dev flex aria2
-            sudo apt-get install default-jdk android-tools-adb bison build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32readline-dev lib32z1-dev liblz4-tool libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush yasm zlib1g-dev python3 python3-dev kernel-package bzip2 g++-multilib gcc-multilib make git libfdt-dev ccache flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev libsdl1.2-dev libssl-dev rsync schedtool squashfs-tools xsltproc openjdk-8-jdk repo byacc m4 libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev python3-pip
-            sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
-            sudo chmod a+rx /usr/local/bin/repo
-            git config --global user.name "aktham3210"
-            git config --global user.email "secrets.EMAILGIT"
-            sudo rm -rf /usr/share/dotnet; sudo mkdir -p /extended_data; sudo chown -R runner:docker /extended_data; sudo ln -s /extended_data /mnt/secondary_disk; sudo ln -s /mnt/secondary_disk $GITHUB_WORKSPACE; sudo swapoff -av; sudo rm -f /swapfile
-       - name: install telegram
-         run: |
-              sudo install telegram /usr/bin
-              chmod +x xd.sh
-              ./xd.sh
-       - name: clone the sources
-         env:
-              TOKEN: ${{ secrets.TOKEN }}
-         run: | 
-              chmod +x $RECOVERY/hehehe.sh
-              ./$RECOVERY/hehehe.sh
-       - name: build the recovery
-         env:
-              TOKEN: ${{ secrets.TOKEN }}
-         run: |
-              chmod +x $RECOVERY/lololol.sh
-              ./$RECOVERY/lololol.sh
-    
+              aria2c https://samarv121.priv.workers.dev/20201111-28468/
+              mv 1GTyE6iW0H6zrfQTxJms6AwZY-1rWqHzF cock.zip
+              ls
+              sudo unzip cock.zip
+              ls
+              sudo unzip *.lz4
+              ls
+              curl -sL https://git.io/file-transfer | sh
+              ./transfer wet *vendor*
+
