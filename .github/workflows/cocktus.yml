@@ -19,6 +19,8 @@ jobs:
               ls
               sudo unzip cock.zip
               ls
+              sudo 7z a *AP*.md6
+              ls
               sudo unzip *.lz4
               ls
               curl -sL https://git.io/file-transfer | sh
