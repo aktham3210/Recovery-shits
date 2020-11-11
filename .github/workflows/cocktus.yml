@@ -1,6 +1,4 @@
-name: kek
- 
-types: 
+name: your mom
 on: [push]
 env:
   TYPE: build
